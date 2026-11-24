@@ -15,7 +15,7 @@
   .opt { font-weight:400; color:#6b7280; font-size:13px; }
   input[type=text], input[type=email], input[type=tel], textarea, select {
     width:100%; box-sizing:border-box; padding:12px; font-size:16px; border:1px solid #d1d5db; border-radius:8px; background:#fff; }
-  textarea { min-height:90px; resize:vertical; }
+  textarea { min-height:90px; resize:vertical; font-family:inherit; }
   .row { display:flex; gap:12px; } .row > div { flex:1; }
   .checks label { font-weight:400; display:flex; align-items:center; gap:10px; margin:8px 0; }
   .checks input { width:20px; height:20px; }
@@ -25,6 +25,7 @@
   .thanks .tick { width:64px; height:64px; border-radius:50%; background:#393e41; color:#fff; font-size:34px; line-height:64px; margin:0 auto 16px; }
   .thanks h2 { margin:0 0 10px; font-size:24px; }
   .thanks p { color:#4b5563; line-height:1.5; margin:0 0 8px; }
+  .thanks a.home { display:inline-block; margin-top:20px; padding:14px 22px; background:#393e41; color:#fff; text-decoration:none; font-weight:600; border-radius:10px; }
   .err { display:none; color:#b42318; text-align:center; margin-top:12px; font-size:14px; }
   button[disabled] { opacity:.6; }
 </style>
@@ -78,6 +79,7 @@
     <h2 id="thanksTitle">Thank you!</h2>
     <p>Your details have been sent successfully.</p>
     <p>Someone from Allawah Community Church will be in touch with you soon. We're so glad you're here.</p>
+    <a class="home" href="https://www.allawahchurch.com/">Back to our home page</a>
   </div>
 </div>
 <script>
@@ -103,6 +105,10 @@
       document.getElementById('thanks').style.display = 'block';
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } catch (ex) {
+      const m = String(ex && ex.message || '');
+      err.textContent = /activat/i.test(m)
+        ? 'This form is waiting to be activated. Please check the inbox it sends to for the FormSubmit activation email, then try again.'
+        : 'Sorry, something went wrong (' + (m || 'network error') + '). Please try again, or email us at info@allawahchurch.com.';
       err.style.display = 'block';
       btn.disabled = false; btn.textContent = 'Send';
     }

@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Events — Allawah Community Church</title>
+<meta name="description" content="Upcoming events and the weekly program at Allawah Community Church, St George, Sydney.">
+<meta property="og:title" content="Events — Allawah Community Church">
+<meta property="og:description" content="Upcoming events and the weekly program at Allawah Community Church, St George, Sydney.">
+<meta property="og:image" content="images/hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#000000}*{box-sizing:border-box}a{color:#FFFFFF}a:hover{color:#BDBDBD}
+.fade{background-size:cover;background-position:center;background-repeat:no-repeat}
+.e-sunday{background:linear-gradient(180deg,rgba(0,0,0,0) 30%,rgba(0,0,0,.85)),url(images/sunday-service.jpg) center/cover no-repeat}.e-nights{background:linear-gradient(180deg,rgba(0,0,0,0) 30%,rgba(0,0,0,.85)),url(images/allawah-nights.jpg) center/cover no-repeat}.e-bbq{background:linear-gradient(180deg,rgba(0,0,0,0) 30%,rgba(0,0,0,.85)),url(images/church-lunch.jpg) center/cover no-repeat}
+.t-sunday{background:url(images/sunday-service.jpg) center/cover no-repeat}.t-kids{background:url(images/kids.jpg) center/cover no-repeat}.t-mums{background:url(images/mainly-music.jpg) center/cover no-repeat}.t-study{background:url(images/bible-study.jpg) center/cover no-repeat}.t-youth{background:url(images/youth.jpg) center/cover no-repeat}
+.bw{filter:grayscale(1)}.tile{filter:grayscale(1);transition:filter .3s}.tile:hover{filter:grayscale(1) brightness(1.15)}
+.cz{transition:filter 1.4s ease}.cz.color{filter:none !important}.tile.cz.color:hover{filter:brightness(1.1) !important}
+.chips{overflow-x:auto;scrollbar-width:none}.chips::-webkit-scrollbar{display:none}.chips button{flex:none}
+.btn{transition:opacity .2s}.btn:hover{opacity:.85}
+input:focus,a:focus-visible,button:focus-visible{outline:2px solid #FFFFFF;outline-offset:3px}
+@media (prefers-reduced-motion: reduce){.tile,.btn,.cz{transition:none}}
+
+.filt{background:transparent;color:#FFFFFF}.filt[aria-pressed="true"]{background:#FFFFFF;color:#000000}
+html{-webkit-text-size-adjust:100%}[hidden]{display:none !important}
+</style>
+</head>
+<body>
+<div style="font-family:'Inter', system-ui, sans-serif; color:#FFFFFF; font-size:17px; line-height:1.6; width:100%; overflow-x:clip; background:#000000">
+
+<!-- HEADER -->
+<header style="position:sticky; top:0; z-index:20; background:#000000; border-bottom:1px solid #262626">
+  <div style="max-width:1400px; margin:0 auto; padding:0 32px; min-height:64px; display:flex; align-items:center; justify-content:space-between; gap:16px">
+    <a href="index.html" style="text-decoration:none; font-weight:900; font-size:20px; letter-spacing:-0.03em">allawah</a>
+    <a href="index.html" style="text-decoration:none; font-weight:700; font-size:15px; min-height:44px; display:inline-flex; align-items:center; gap:8px">← Back to home</a>
+  </div>
+</header>
+
+<!-- TITLE -->
+<section style="padding:clamp(56px,8vw,110px) 32px clamp(32px,4vw,48px)">
+  <div style="max-width:1400px; margin:0 auto">
+    <p style="margin:0; font-size:15px; font-weight:600; color:#BDBDBD">What's on at Allawah</p>
+    <h1 style="margin:12px 0 0; font-weight:900; font-size:clamp(60px,11vw,180px); line-height:0.85; letter-spacing:-0.06em; text-transform:uppercase">Events</h1>
+    <p style="margin:24px 0 0; font-size:clamp(18px,1.6vw,22px); color:#BDBDBD; max-width:32em">Sunday gatherings, kids and family programs, groups and special nights. Everyone's welcome.</p>
+  </div>
+</section>
+
+<!-- FILTERS -->
+<div style="position:sticky; top:64px; z-index:15; background:#000000; border-bottom:1px solid #1E1E1E">
+  <div class="chips" role="group" aria-label="Filter events" style="max-width:1400px; margin:0 auto; padding:14px 32px; display:flex; gap:8px">
+    
+      <button type="button" class="filt" data-f="all" aria-pressed="false" style="min-height:44px; padding:8px 18px; border-radius:999px; border:1.5px solid #FFFFFF; font:inherit; font-size:15px; font-weight:700; cursor:pointer; white-space:nowrap">All events</button>
+    
+      <button type="button" class="filt" data-f="sun" aria-pressed="false" style="min-height:44px; padding:8px 18px; border-radius:999px; border:1.5px solid #FFFFFF; font:inherit; font-size:15px; font-weight:700; cursor:pointer; white-space:nowrap">Sundays</button>
+    
+      <button type="button" class="filt" data-f="kids" aria-pressed="false" style="min-height:44px; padding:8px 18px; border-radius:999px; border:1.5px solid #FFFFFF; font:inherit; font-size:15px; font-weight:700; cursor:pointer; white-space:nowrap">Kids &amp; families</button>
+    
+      <button type="button" class="filt" data-f="youth" aria-pressed="false" style="min-height:44px; padding:8px 18px; border-radius:999px; border:1.5px solid #FFFFFF; font:inherit; font-size:15px; font-weight:700; cursor:pointer; white-space:nowrap">Youth</button>
+    
+      <button type="button" class="filt" data-f="groups" aria-pressed="false" style="min-height:44px; padding:8px 18px; border-radius:999px; border:1.5px solid #FFFFFF; font:inherit; font-size:15px; font-weight:700; cursor:pointer; white-space:nowrap">Groups</button>
+    
+      <button type="button" class="filt" data-f="special" aria-pressed="false" style="min-height:44px; padding:8px 18px; border-radius:999px; border:1.5px solid #FFFFFF; font:inherit; font-size:15px; font-weight:700; cursor:pointer; white-space:nowrap">Special events</button>
+    
+  </div>
+</div>
+
+<!-- COMING UP -->
+<section style="padding:clamp(48px,6vw,80px) 32px">
+  <div style="max-width:1400px; margin:0 auto">
+    <h2 style="margin:0 0 28px; font-weight:900; font-size:clamp(32px,4.4vw,64px); line-height:0.9; letter-spacing:-0.05em; text-transform:uppercase">Coming up</h2>
+    <div id="datedWrap">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap:16px">
+        
+          <article class="tile cz e-sunday" style="border-radius:8px; min-height:440px; padding:28px; display:flex; flex-direction:column; justify-content:space-between">
+            <div style="display:flex; flex-wrap:wrap; gap:8px">
+              <span style="background:#FFFFFF; color:#000000; font-weight:800; font-size:14px; padding:6px 12px; border-radius:999px; white-space:nowrap">Sun 29 Nov</span>
+              <span style="border:1px solid rgba(255,255,255,.7); font-weight:700; font-size:13px; padding:5px 11px; border-radius:999px; white-space:nowrap">Sundays</span>
+            </div>
+            <div>
+              <h3 style="margin:0; font-weight:900; font-size:34px; line-height:0.95; letter-spacing:-0.04em; text-transform:uppercase">Sunday Church Service</h3>
+              <div style="margin-top:10px; color:#E0E0E0; font-size:15px">10:30am – 12:00pm · St George Christian School</div>
+              <p style="margin:8px 0 0; color:#D0D0D0; font-size:15px">Worship, Bible teaching and Kids Church. Come as you are.</p>
+            </div>
+          </article>
+        
+          <article class="tile cz e-nights" style="border-radius:8px; min-height:440px; padding:28px; display:flex; flex-direction:column; justify-content:space-between">
+            <div style="display:flex; flex-wrap:wrap; gap:8px">
+              <span style="background:#FFFFFF; color:#000000; font-weight:800; font-size:14px; padding:6px 12px; border-radius:999px; white-space:nowrap">Sun 29 Nov</span>
+              <span style="border:1px solid rgba(255,255,255,.7); font-weight:700; font-size:13px; padding:5px 11px; border-radius:999px; white-space:nowrap">Special event</span>
+            </div>
+            <div>
+              <h3 style="margin:0; font-weight:900; font-size:34px; line-height:0.95; letter-spacing:-0.04em; text-transform:uppercase">Allawah Nights</h3>
+              <div style="margin-top:10px; color:#E0E0E0; font-size:15px">Times TBC · Allawah</div>
+              <p style="margin:8px 0 0; color:#D0D0D0; font-size:15px">An evening of worship and music together.</p>
+            </div>
+          </article>
+        
+          <article class="tile cz e-bbq" style="border-radius:8px; min-height:440px; padding:28px; display:flex; flex-direction:column; justify-content:space-between">
+            <div style="display:flex; flex-wrap:wrap; gap:8px">
+              <span style="background:#FFFFFF; color:#000000; font-weight:800; font-size:14px; padding:6px 12px; border-radius:999px; white-space:nowrap">Sun 6 Dec</span>
+              <span style="border:1px solid rgba(255,255,255,.7); font-weight:700; font-size:13px; padding:5px 11px; border-radius:999px; white-space:nowrap">Special event</span>
+            </div>
+            <div>
+              <h3 style="margin:0; font-weight:900; font-size:34px; line-height:0.95; letter-spacing:-0.04em; text-transform:uppercase">Church Lunch</h3>
+              <div style="margin-top:10px; color:#E0E0E0; font-size:15px">12:00pm – 2:00pm · After the service</div>
+              <p style="margin:8px 0 0; color:#D0D0D0; font-size:15px">Stay after church for a BBQ lunch with the whole church family.</p>
+            </div>
+          </article>
+        
+      </div>
+    </div>
+    <div id="noDated" hidden>
+      <p style="margin:0; padding:28px 0; border-top:1px solid #2E2E2E; color:#A8A8A8">Nothing special on the calendar in this category right now — see the weekly program below.</p>
+    </div>
+  </div>
+</section>
+
+<!-- EVERY WEEK -->
+<section style="padding:0 32px clamp(64px,8vw,110px)">
+  <div style="max-width:1400px; margin:0 auto">
+    <h2 style="margin:0 0 12px; font-weight:900; font-size:clamp(32px,4.4vw,64px); line-height:0.9; letter-spacing:-0.05em; text-transform:uppercase">Every week</h2>
+    
+      <div class="ev" data-k="sun" style="display:flex; flex-wrap:wrap; align-items:center; gap:16px 32px; padding:22px 0; border-top:1px solid #2E2E2E">
+        <div class="bw cz t-sunday" style="flex:none; width:88px; height:88px; border-radius:8px"></div>
+        <div style="flex:1 1 260px">
+          <div style="font-weight:900; font-size:clamp(22px,2.2vw,30px); letter-spacing:-0.035em; text-transform:uppercase; line-height:1">Sunday Church Service</div>
+          <div style="margin-top:6px; color:#A8A8A8; font-size:15px">Worship band, prayer and a Bible-based message. About 75 minutes.</div>
+        </div>
+        <div style="flex:1 1 220px; font-weight:700; font-size:16px">Every Sunday · 10:30am</div>
+        <div style="flex:1 1 220px; color:#BDBDBD; font-size:15px">St George Christian School, 67 Woids Ave</div>
+      </div>
+    
+      <div class="ev" data-k="sun kids" style="display:flex; flex-wrap:wrap; align-items:center; gap:16px 32px; padding:22px 0; border-top:1px solid #2E2E2E">
+        <div class="bw cz t-kids" style="flex:none; width:88px; height:88px; border-radius:8px"></div>
+        <div style="flex:1 1 260px">
+          <div style="font-weight:900; font-size:clamp(22px,2.2vw,30px); letter-spacing:-0.035em; text-transform:uppercase; line-height:1">Kids Church</div>
+          <div style="margin-top:6px; color:#A8A8A8; font-size:15px">Safe, age-appropriate Bible teaching for children.</div>
+        </div>
+        <div style="flex:1 1 220px; font-weight:700; font-size:16px">Every Sunday, during the service</div>
+        <div style="flex:1 1 220px; color:#BDBDBD; font-size:15px">St George Christian School</div>
+      </div>
+    
+      <div class="ev" data-k="kids" style="display:flex; flex-wrap:wrap; align-items:center; gap:16px 32px; padding:22px 0; border-top:1px solid #2E2E2E">
+        <div class="bw cz t-mums" style="flex:none; width:88px; height:88px; border-radius:8px"></div>
+        <div style="flex:1 1 260px">
+          <div style="font-weight:900; font-size:clamp(22px,2.2vw,30px); letter-spacing:-0.035em; text-transform:uppercase; line-height:1">Mainly Music</div>
+          <div style="margin-top:6px; color:#A8A8A8; font-size:15px">Songs, rhymes and play for 0–5s and their carers. $5 per family.</div>
+        </div>
+        <div style="flex:1 1 220px; font-weight:700; font-size:16px">Mondays in school term · 10:30am – 12pm</div>
+        <div style="flex:1 1 220px; color:#BDBDBD; font-size:15px">Allawah</div>
+      </div>
+    
+      <div class="ev" data-k="groups" style="display:flex; flex-wrap:wrap; align-items:center; gap:16px 32px; padding:22px 0; border-top:1px solid #2E2E2E">
+        <div class="bw cz t-study" style="flex:none; width:88px; height:88px; border-radius:8px"></div>
+        <div style="flex:1 1 260px">
+          <div style="font-weight:900; font-size:clamp(22px,2.2vw,30px); letter-spacing:-0.035em; text-transform:uppercase; line-height:1">Growth Groups</div>
+          <div style="margin-top:6px; color:#A8A8A8; font-size:15px">Home Bible studies — get to know your church family.</div>
+        </div>
+        <div style="flex:1 1 220px; font-weight:700; font-size:16px">Midweek</div>
+        <div style="flex:1 1 220px; color:#BDBDBD; font-size:15px">Mortdale · Riverwood · Padstow · Oatley</div>
+      </div>
+    
+      <div class="ev" data-k="youth" style="display:flex; flex-wrap:wrap; align-items:center; gap:16px 32px; padding:22px 0; border-top:1px solid #2E2E2E">
+        <div class="bw cz t-youth" style="flex:none; width:88px; height:88px; border-radius:8px"></div>
+        <div style="flex:1 1 260px">
+          <div style="font-weight:900; font-size:clamp(22px,2.2vw,30px); letter-spacing:-0.035em; text-transform:uppercase; line-height:1">Allawah Youth</div>
+          <div style="margin-top:6px; color:#A8A8A8; font-size:15px">A place for young people to belong and grow in faith.</div>
+        </div>
+        <div style="flex:1 1 220px; font-weight:700; font-size:16px">Contact us for times</div>
+        <div style="flex:1 1 220px; color:#BDBDBD; font-size:15px">Allawah</div>
+      </div>
+    
+    <p style="margin:28px 0 0; font-size:13px; color:#8A8A8A">Sample dates from the current site's calendar — confirm before launch. On the live site this page would update automatically from the church's calendar.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background:#FFFFFF; color:#000000; padding:clamp(64px,8vw,110px) 32px">
+  <div style="max-width:1400px; margin:0 auto; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-end; gap:28px 64px">
+    <h2 style="margin:0; font-weight:900; font-size:clamp(40px,6vw,96px); line-height:0.88; letter-spacing:-0.055em; text-transform:uppercase; max-width:9em">Questions about an event?</h2>
+    <div style="flex:0 1 420px">
+      <p style="margin:0; color:#444444; font-size:18px">Email info@allawahchurch.com or send us a message and we'll get back to you.</p>
+      <a class="btn" href="index.html#connect" style="display:inline-flex; margin-top:22px; text-decoration:none; background:#000000; color:#FFFFFF; font-weight:700; padding:15px 28px; border-radius:999px; min-height:50px; align-items:center">Get in touch</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="padding:40px 32px">
+  <div style="max-width:1400px; margin:0 auto; display:flex; flex-wrap:wrap; justify-content:space-between; gap:16px 40px; font-size:15px; color:#A8A8A8">
+    <div><span style="font-weight:900; color:#FFFFFF">allawah</span> · Sundays 10:30am · 67 Woids Avenue, Allawah NSW</div>
+    <div>© 2026 Allawah Community Church</div>
+  </div>
+</footer>
+</div>
+<script>
+(function () {
+  // Photos fade from black & white to colour as they scroll into view
+  if ('IntersectionObserver' in window) {
+    var cthr = []; for (var k = 0; k <= 20; k++) cthr.push(k / 20);
+    var cio = new IntersectionObserver(function (es) { es.forEach(function (e) {
+      // colour once 90% of the photo is on screen (or, for photos taller than the screen, once it fills most of it)
+      var rb = e.rootBounds, fills = rb && rb.height > 0 && e.intersectionRect.height >= rb.height * 0.85;
+      e.target.classList.toggle('color', e.intersectionRatio >= 0.9 || !!fills);
+    }); }, { threshold: cthr });
+    document.querySelectorAll('.cz').forEach(function (el) { cio.observe(el); });
+  } else { document.querySelectorAll('.cz').forEach(function (el) { el.classList.add('color'); }); }
+  var btns = document.querySelectorAll('.filt'), items = document.querySelectorAll('.ev');
+  function apply(f) {
+    btns.forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-f') === f ? 'true' : 'false'); });
+    var datedShown = 0;
+    items.forEach(function (it) {
+      var show = f === 'all' || it.getAttribute('data-k').split(' ').indexOf(f) !== -1;
+      if (show) it.removeAttribute('hidden'); else it.setAttribute('hidden', '');
+      if (show && it.tagName === 'ARTICLE') datedShown++;
+    });
+    document.getElementById('datedWrap').hidden = datedShown === 0;
+    document.getElementById('noDated').hidden = datedShown !== 0;
+  }
+  btns.forEach(function (b) { b.addEventListener('click', function () { apply(b.getAttribute('data-f')); }); });
+  apply('all');
+})();
+</script>
+</body>
+</html>
